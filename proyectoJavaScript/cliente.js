@@ -11,10 +11,12 @@ class Cliente{
         this.tipoAbono = tipoAbono;
     }
 
-    depositarVehiculo(matricula, tipoVehiculo){
-        this.matricula = matricula;
-        this.tipoVehiculo = tipoVehiculo;
+    depositarVehiculo(matricula, tipoVehiculo, plazaAsignada, pin){
+        matricula = readline.question("Dime cual es la matricula");
+        tipoVehiculo = readline.question("Dime que tipo de vehiculo vas a depositar");
+        this.plazaAsignada = plazaAsignada;
+        pin = readline.question("Indica el pin");
         ticket = new Ticket();
-        ticket.generaTicket;
+        ticket.generaTicket(matricula, moment.localeData(), plazaAsignada, pin);
     }
 }
